@@ -1,0 +1,37 @@
+<h3>Styles com property binding (style binding)</h3>
+
+<section>
+  <article>
+    <button
+      class="btn"
+      [style.backgroundColor]="ativo ? 'blue' : 'gray'"
+      [style.color]="ativo ? 'white' : 'black'"
+      [style.fontWeight]="ativo ? 'bold' : 'normal'"
+      [style.fontSize]="tamanhoFonte + 'px'"
+      (click)="ativo = !ativo"
+    >
+      Mudar atributo "ativo"
+    </button>
+  </article>
+</section>
+
+<section>
+  <article>
+    <button
+      class="btn"
+      [ngStyle]="{
+        'background-color': (ativo ? 'blue' : 'gray'),
+        'color': (ativo ? 'white' : 'black'),
+        'font-weight': (ativo ? 'bold' : 'normal'),
+        'font-size': (tamanhoFonte + 'px')
+      }"
+      (click)="ativo = !ativo"
+    >
+      Mudar atributo "ativo"
+    </button>
+  </article>
+
+  <article>
+    <input type="text" [(ngModel)]="tamanhoFonte">
+  </article>
+</section>

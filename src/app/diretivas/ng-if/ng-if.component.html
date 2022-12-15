@@ -1,0 +1,17 @@
+<h3>*ngIf</h3>
+
+<button
+  class="btn btn-primary"
+  (click)="mostrarCursos = !mostrarCursos"
+>
+  Mostrar/Esconder cursos
+</button>
+
+<div>
+  <ul *ngIf="mostrarCursos">
+    <li *ngFor="let curso of cursos">{{ curso }}</li>
+  </ul>
+</div>
+<div *ngIf="!mostrarCursos">
+  Não existem cursos para serem listados
+</div>

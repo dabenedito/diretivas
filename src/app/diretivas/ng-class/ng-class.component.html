@@ -1,0 +1,21 @@
+<h1>
+  <p>
+    <i class="bi"
+       aria-hidden="true"
+       [class.bi-star]="!favorited"
+       [class.bi-star-fill]="favorited"
+       (click)="favorited = !favorited"
+    ></i>
+  </p>
+
+  <p>
+    <i class="bi"
+       aria-hidden="true"
+       [ngClass]="{
+       'bi-star': !favorited,
+       'bi-star-fill': favorited
+     }"
+       (click)="favorited = !favorited"
+    ></i>
+  </p>
+</h1>
